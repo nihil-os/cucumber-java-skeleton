@@ -17,11 +17,11 @@ public class Stepdefs {
 
     @When("^I wait (\\d+) seconds$")
     public void i_wait_hour(int seconds) throws Throwable {
-        Thread.sleep(1);
+        Thread.sleep(seconds*1000);
     }
 
-    @Then("^my shoppingcart should beready$")
-    public void my_shoppingcart_should_beready() throws Throwable {
-        Assert.assertEquals(shoppingCart.getStatus(), "READY");
+    @Then("^my shoppingcart should be (.*)$")
+    public void my_shoppingcart_should_beready(String status) throws Throwable {
+        Assert.assertEquals(shoppingCart.getStatus(), status);
     }
 }

@@ -1,6 +1,6 @@
-Feature: Belly
+Feature: Shoppingcart
 
-  Scenario: a few items
+  Scenario: checkout a cart in 10 secs
     Given I have 28 items in my shoppingcart
-    When I wait 1 seconds
-    Then my shoppingcart should beready
+    When I wait 10 seconds
+    Then my shoppingcart should be READY
